@@ -1,0 +1,66 @@
+#!/bin/bash
+
+mkdir -p ~/Pictures/Screenshots
+
+FILENAME="$(date +%Y-%m-%d_%H-%m-%s).png"
+IMAGE=~/Pictures/Screenshots/$FILENAME
+
+play_sound() {
+  play ~/.config/hypr/sounds/camera-shutter.ogg
+}
+
+send_notify() {
+    notify-send -i $IMAGE "Screenshot" "Saved and Copied \n $FILENAME"
+}
+
+all() {
+  grim $IMAGE
+  wl-copy < $IMAGE
+  play_sound
+  send_notify
+}
+
+window() {
+  hyprctl -j activewindow | jq -r '"\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])"' | grim -g - $IMAGE
+  wl-copy < $IMAGE
+  play_sound
+  send_notify
+}
+
+area() {
+  grim -g "$(slurp -w 0 -d)" $IMAGE
+  wl-copy < $IMAGE
+  play_sound
+  send_notify
+}
+
+USAGE="Usage: $(basename "$0") [options...]
+
+              All screen
+-w --window   Active window
+-a --area     Selected area"
+
+handle_options() {
+  while [ $# -gt 0 ]; do
+    case $1 in
+      -w | --window)
+        window
+        exit 0
+        ;;
+      -a | --area)
+        area
+        exit 0
+        ;;
+      *)
+        echo "$USAGE" >&2
+        exit 1
+        ;;
+    esac
+    shift
+  done
+
+  all
+  exit 0
+}
+
+handle_options "$@"
