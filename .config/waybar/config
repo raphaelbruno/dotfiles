@@ -15,14 +15,11 @@
 	"format": "{icon}",
 	"format-icons": {
 		"1": "",
-		"2": "",
-		"3": "",
-		"4": "",
 		"active": "",
 		"default": "" 
 	},
        "persistent-workspaces": {
-         "*": [ 2, 3, 4 ]
+         "*": [ 1 ]
        }
 },
 
@@ -151,7 +148,7 @@
 },
 
  "hyprland/window": {
-    "format": "( {class} )",
+    "format": "[ {class} ]",
     "rewrite": {
          "(.*) - Mozilla Firefox": "🌎 $1",
          "(.*) - zsh": "> [$1]"

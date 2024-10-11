@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
-swww init &
-
-sleep 1
+swww init
+swww img ~/Pictures/Wallpapers/default.jpg 
 sh ~/.config/hypr/scripts/lock-screen
+
 swayidle -w timeout 300 "~/.config/hypr/scripts/lock-screen" &
+hyprctl setcursor 24 &
 
 dunst &
 systemctl --user start plasma-polkit-agent &
