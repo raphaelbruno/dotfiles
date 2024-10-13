@@ -4,7 +4,7 @@ swww init
 swww img ~/Pictures/Wallpapers/default.jpg
 
 hyprlock
-swayidle -w timeout 300 hyprlock &
+swayidle -w timeout 300 ~/.config/hypr/scripts/screenlock &
 hyprctl setcursor 24 &
 
 dunst &
