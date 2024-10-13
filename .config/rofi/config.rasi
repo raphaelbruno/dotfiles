@@ -1,1 +1,94 @@
-@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
+* {
+  bg0: #000000cc;
+  bg1: #ffffff11;
+  fg0: #ffffff;
+  fg1: #ffffff99;
+}
+
+* {
+  font: "Roboto 12";
+
+  background-color: transparent;
+  text-color: @fg0;
+
+  margin: 0px;
+  padding: 0px;
+  spacing: 0px;
+}
+
+configuration {
+  modes: [ combi];
+  combi-modes: [ window, drun, run];
+}
+
+element {
+  orientation: horizontal;
+  children: [ element-icon, element-text];
+  padding: 5;
+  background-color: transparent;
+}
+
+element normal.normal,
+element alternate.normal {
+  background-color: transparent;
+}
+
+element selected.normal {
+  background-color: @bg1;
+  border-radius: 10px;
+}
+
+mainbox {
+  padding: 12px;
+}
+
+window {
+  location: center;
+  width: 50%;
+  border-radius: 24px;
+  border-color: transparent;
+  background-color: @bg0;
+}
+
+listview {
+  padding: 10px 0px 0px;
+  scrollbar: true;
+  border: none;
+  spacing: 0;
+  lines: 5;
+}
+
+scrollbar {
+  padding: 0 0 0 5px;
+  handle-width: 5px;
+  border: 0;
+  handle-color: @bg1;
+}
+
+entry {
+  placeholder: "Search";
+  text-color: @fg1;
+  cursor-width: 8px;
+  background-color: transparent;
+}
+
+element-text {
+  text-color: @fg0;
+  background-color: transparent;
+  padding: 10 0 0 10;
+}
+
+element-icon {
+  size: 2em;
+  vertical-align: 1;
+  background-color: transparent;
+}
+
+inputbar {
+  background-color: @bg1;
+  border-radius: 16px;
+
+  padding: 8px 16px;
+  spacing: 8px;
+  children: [ entry];
+}
