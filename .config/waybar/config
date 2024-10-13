@@ -31,7 +31,7 @@
   "custom/logo": {
     "format": "",
     "tooltip": false,
-    "on-click": "rofi -show-icons"
+    "on-click": "rofi -show drun -show-icons"
   },
   "custom/power": {
     "format": "⏻ ",
