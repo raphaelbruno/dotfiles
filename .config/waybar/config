@@ -24,6 +24,7 @@
     "bluetooth",
     "pulseaudio",
     "network",
+    "custom/keyboard",
     "battery",
     "custom/power"
   ],
@@ -37,6 +38,13 @@
     "format": "⏻ ",
     "tooltip": false,
     "on-click": "nwg-bar"
+  },
+  "custom/keyboard": {
+    "exec": "hyprctl devices -j | jq -r '.keyboards[] | select(.main == true) | .active_keymap' | cut -c1-2 |   tr 'a-z' 'A-Z'",
+    "interval": 1,
+    "format": "{} ⌨ ",
+    "tooltip": true,
+    "tooltip-format": "Keyboard layout"
   },
   "hyprland/workspaces": {
     "format": "{icon}",
@@ -52,10 +60,12 @@
     }
   },
   "idle_inhibitor": {
-    "format": "<span font='12'>{icon} </span>",
+    "tooltip-format-activated": "Lock screen inactive",
+    "tooltip-format-deactivated": "Lock screen active",
+    "format": "<span font='12'>{icon}</span>",
     "format-icons": {
-      "activated": "󰈈",
-      "deactivated": "󰈉"
+      "activated": "󰈈 ",
+      "deactivated": "󰈉 "
     }
   },
   "custom/weather": {
@@ -97,8 +107,8 @@
     "format-ethernet": "  ",
     "format-disconnected": " ",
     "tooltip-format": "{ipaddr}",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%)  | {ipaddr}",
-    "tooltip-format-ethernet": "{ifname} 🖧 | {ipaddr}",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)      {ipaddr}",
+    "tooltip-format-ethernet": "{ifname}  🖧    {ipaddr}",
     "on-click": "nm-connection-editor"
   },
   "battery": {
