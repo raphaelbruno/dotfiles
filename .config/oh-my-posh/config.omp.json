@@ -6,7 +6,7 @@
       "segments": [
         {
           "background": "#0C212F",
-          "foreground": "#FFFFFF",
+          "foreground": "#5CCBF3",
           "leading_diamond": "\ue0b6",
           "style": "diamond",
           "template": " {{ .Icon }} ",
@@ -23,11 +23,11 @@
           "type": "root"
         },
         {
-          "background": "#26BDBB",
-          "foreground": "#0C212F",
-          "leading_diamond": "<transparent,#26BDBB>\ue0b0</>",
+          "background": "#333333",
+          "foreground": "#FFFFFF",
+          "leading_diamond": "<transparent,#333333>\ue0b0</>",
           "properties": {
-            "folder_icon": "...",
+            "folder_icon": "-",
             "folder_separator_icon": "<transparent> \ue0b1 </>",
             "home_icon": "\ueb06",
             "style": "agnoster_short"
@@ -57,21 +57,9 @@
           "type": "git"
         },
         {
-          "background": "#0C212F",
+          "background": "#555555",
           "foreground": "#FFFFFF",
-          "leading_diamond": "<transparent,#0C212F>\ue0b0</>",
-          "properties": {
-            "time_format": "15:04"
-          },
-          "style": "diamond",
-          "template": " {{ .CurrentDate | date .Format }} ",
-          "trailing_diamond": "\ue0b0",
-          "type": "time"
-        },
-        {
-          "background": "#26BDBB",
-          "foreground": "#0C212F",
-          "leading_diamond": "<transparent,#26BDBB>\ue0b0</>",
+          "leading_diamond": "<transparent,#555555>\ue0b0</>",
           "properties": {
             "style": "dallas",
             "threshold": 0
@@ -83,7 +71,7 @@
         },
         {
           "background": "#910000",
-          "foreground": "#ffffff",
+          "foreground": "#FFFFFF",
           "leading_diamond": "<transparent,background>\ue0b0</>",
           "style": "diamond",
           "template": "<transparent> \uf12a</> {{ reason .Code }} ",
