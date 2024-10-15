@@ -42,7 +42,7 @@
   "custom/keyboard": {
     "exec": "hyprctl devices -j | jq -r '.keyboards[] | select(.main == true) | .active_keymap' | cut -c1-2 |   tr 'a-z' 'A-Z'",
     "interval": 1,
-    "format": "{} ⌨ ",
+    "format": "{} ⌨  ",
     "tooltip": true,
     "tooltip-format": "Keyboard layout"
   },
