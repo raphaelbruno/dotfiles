@@ -18,9 +18,9 @@ window#waybar {
   padding: 0 10px;
 }
 
-.modules-right {
-  padding-left: 10px;
-  border-radius: 15px 0 0 15px;
+.modules-left {
+  padding-right: 10px;
+  border-radius: 0 15px 15px 0;
   margin-top: 2px;
   background: rgba(0, 0, 0, 0.8);
   color: #aaaaaa;
@@ -34,9 +34,9 @@ window#waybar {
   color: #aaaaaa;
 }
 
-.modules-left {
-  padding-right: 10px;
-  border-radius: 0 15px 15px 0;
+.modules-right {
+  padding-left: 10px;
+  border-radius: 15px 0 0 15px;
   margin-top: 2px;
   background: rgba(0, 0, 0, 0.8);
   color: #aaaaaa;
@@ -44,6 +44,11 @@ window#waybar {
 
 #workspaces button {
   color: rgb(170, 170, 170);
+  border-radius: 15px;
+}
+
+#workspaces button.active {
+  color: #5fd1fa;
 }
 
 #workspaces button.empty {
