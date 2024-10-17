@@ -1,7 +1,7 @@
 * {
   border: none;
   font-size: 14px;
-  font-family: "JetBrainsMono Nerd Font,JetBrainsMono NF";
+  font-family: monospace;
   min-height: 25px;
 }
 
@@ -20,31 +20,48 @@ window#waybar {
 
 .modules-left {
   padding-right: 10px;
-  border-radius: 0 15px 15px 0;
-  margin-top: 2px;
+  border-radius: 15;
+  margin-left: 6px;
+  margin-top: 6px;
+  border: 5px solid;
+  border-color: rgba(255, 255, 255, 0.3);
   background: rgba(0, 0, 0, 0.8);
   color: #aaaaaa;
 }
 
 .modules-center {
   padding: 0;
-  margin-top: 2px;
-  border-radius: 15px 15px 15px 15px;
+  margin-top: 6px;
+  border-radius: 15px;
+  border: 5px solid;
+  border-color: rgba(255, 255, 255, 0.3);
   background: rgba(0, 0, 0, 0.8);
   color: #aaaaaa;
 }
 
 .modules-right {
   padding-left: 10px;
-  border-radius: 15px 0 0 15px;
-  margin-top: 2px;
+  border-radius: 15px;
+  margin-right: 6px;
+  margin-top: 6px;
+  border: 5px solid;
+  border-color: rgba(255, 255, 255, 0.3);
   background: rgba(0, 0, 0, 0.8);
   color: #aaaaaa;
 }
 
+.modules-left:active,
+.modules-center:hover,
+.modules-right:hover {
+  border: 2px solid;
+  border-color: #5fd1fa;
+}
+
+
 #workspaces button {
   color: rgb(170, 170, 170);
   border-radius: 15px;
+  padding: 3px 6px;
 }
 
 #workspaces button.active {

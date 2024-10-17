@@ -62,21 +62,21 @@
   "idle_inhibitor": {
     "tooltip-format-activated": "Lock screen inactive",
     "tooltip-format-deactivated": "Lock screen active",
-    "format": "<span font='12'>{icon}</span>",
+    "format": "<span font='14'>{icon}</span>",
     "format-icons": {
-      "activated": "󰈈 ",
-      "deactivated": "󰈉 "
+      "activated": "󰈈",
+      "deactivated": "󰈉"
     }
   },
   "custom/weather": {
     "format": "{}",
     "return-type": "json",
     "exec": "~/.config/waybar/scripts/weather.sh",
-    "interval": 10,
+    "interval": 600,
     "on-click": "chromium https://wttr.in"
   },
   "custom/clipboard": {
-    "format": "",
+    "format": " ",
     "on-click": "cliphist list | rofi -dmenu | cliphist decode | wl-copy",
     "interval": 86400
   },
@@ -91,7 +91,7 @@
     "format-calendar-weekdays": "<span color='#aeaeae'><b>{}</b></span>"
   },
   "bluetooth": {
-    "format-on": "",
+    "format-on": " ",
     "format-off": "",
     "format-disabled": "󰂲",
     "format-connected": "󰂴",
@@ -118,7 +118,7 @@
       "warning": 30,
       "critical": 20
     },
-    "format": "{capacity}%  {icon}",
+    "format": "{capacity}% {icon}",
     "format-charging": "{capacity}% 󰂄",
     "format-plugged": "{capacity}% 󰂄 ",
     "format-alt": "{time} {icon}",
@@ -152,7 +152,7 @@
   },
   "disk": {
     "interval": 30,
-    "format": "  {percentage_used}%",
+    "format": " {percentage_used}%",
     "path": "/"
   },
   "custom/colorpicker": {
@@ -165,7 +165,7 @@
   },
   "cpu": {
     "interval": 1,
-    "format": "  {usage}%",
+    "format": " {usage}%",
     "min-length": 6,
     "max-length": 6,
     "format-icons": [
@@ -180,7 +180,7 @@
     ]
   },
   "memory": {
-    "format": "  {percentage}%"
+    "format": " {percentage}%"
   },
   "hyprland/window": {
     "format": "[ {class} ]",

@@ -3,6 +3,7 @@
   bg1: #ffffff11;
   fg0: #ffffff;
   fg1: #ffffff99;
+  actv: #ffffff22;
 }
 
 * {
@@ -38,17 +39,21 @@ element selected.normal {
   border-radius: 7px;
 }
 
-mainbox {
-  padding: 12px;
-}
-
 window {
   location: center;
   width: 33%;
-  border-radius: 10px;
-  border-color: transparent;
-  background-color: @bg0;
+  border-radius: 12px;
+  background-color: @actv;
+  border: none;
+  padding: 5px;
 }
+
+mainbox {
+  border-radius: 10px;
+  background-color: @bg0;
+  padding: 10px;
+}
+
 
 listview {
   padding: 10px 0px 0px;
