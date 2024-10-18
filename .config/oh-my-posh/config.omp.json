@@ -62,24 +62,143 @@
       "alignment": "right",
       "segments": [
         {
-          "background": "#910000",
-          "foreground": "#FFFFFF",
+          "background": "#06A4CE",
+          "foreground": "#ffffff",
           "invert_powerline": true,
-          "powerline_symbol": "\ue0b2",
+          "properties": {
+            "fetch_version": true
+          },
           "style": "powerline",
-          "template": "<foreground> \uf12a</>{{ reason .Code }} <transparent,background>\ue0b2</>",
-          "type": "status"
+          "template": "<background,transparent>\ue0b2</> {{ .Full }} \ue798 <transparent,background>\ue0b2</>",
+          "type": "dart"
+        },
+        {
+          "background": "#00ffff",
+          "foreground": "#000000",
+          "invert_powerline": true,
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "powerline",
+          "template": "<background,transparent>\ue0b2</> {{ .Full }} \ue77f <transparent,background>\ue0b2</>",
+          "type": "dotnet"
+        },
+        {
+          "background": "#4063D8",
+          "foreground": "#ffffff",
+          "invert_powerline": true,
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "powerline",
+          "template": "<background,transparent>\ue0b2</> {{ .Full }} \ue738 <transparent,background>\ue0b2</>",
+          "type": "java"
+        },
+        {
+          "background": "#906cff",
+          "foreground": "#ffffff",
+          "invert_powerline": true,
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "powerline",
+          "template": "<background,transparent>\ue0b2</> {{ .Full }} <b>K</b> <transparent,background>\ue0b2</>",
+          "type": "kotlin"
+        },
+        {
+          "background": "#6CA35E",
+          "foreground": "#ffffff",
+          "invert_powerline": true,
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "powerline",
+          "template": "<background,transparent>\ue0b2</> {{ .Full }} \ue718 <transparent,background>\ue0b2</>",
+          "type": "node"
+        },
+        {
+          "background": "#4063D8",
+          "foreground": "#ffffff",
+          "invert_powerline": true,
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "powerline",
+          "template": "<background,transparent>\ue0b2</> {{ .Full }} \ue73d <transparent,background>\ue0b2</>",
+          "type": "php"
+        },
+        {
+          "background": "#906cff",
+          "foreground": "#100e23",
+          "invert_powerline": true,
+          "properties": {
+            "display_mode": "files",
+            "fetch_virtual_env": false
+          },
+          "style": "powerline",
+          "template": "<background,transparent>\ue0b2</> {{ .Full }} \ue235 <transparent,background>\ue0b2</>",
+          "type": "python"
+        },
+        {
+          "background": "#99908a",
+          "foreground": "#193549",
+          "invert_powerline": true,
+          "properties": {
+            "display_mode": "files",
+            "fetch_version": true
+          },
+          "style": "powerline",
+          "template": "<background,transparent>\ue0b2</> {{ .Full }} \ue7a8 <transparent,background>\ue0b2</>",
+          "type": "rust"
+        },
+        {
+          "background": "#FEAC19",
+          "foreground": "#ffffff",
+          "invert_powerline": true,
+          "properties": {
+            "display_mode": "files",
+            "fetch_version": false
+          },
+          "style": "powerline",
+          "template": "<background,transparent>\ue0b2</> {{ .Full }} \uf0e7 <transparent,background>\ue0b2</>",
+          "type": "azfunc"
+        },
+        {
+          "background_templates": [
+            "{{if contains \"default\" .Profile}}#FFA400{{end}}",
+            "{{if contains \"jan\" .Profile}}#f1184c{{end}}"
+          ],
+          "foreground": "#ffffff",
+          "invert_powerline": true,
+          "properties": {
+            "display_default": false
+          },
+          "style": "powerline",
+          "template": "<background,transparent>\ue0b2</> {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }}  <transparent,background>\ue0b2</>",
+          "type": "aws"
+        },
+        {
+          "background": "#333333",
+          "foreground": "#ffffff",
+          "invert_powerline": true,
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "powerline",
+          "template": "<background,transparent>\ue0b2</> {{ .FormattedMs }} \uf252 <transparent,background>\ue0b2</>",
+          "type": "executiontime"
         },
         {
           "background": "#1C313F",
+          "background_templates": ["{{ if gt .Code 0 }}#cc2222{{ end }}"],
           "foreground": "#4CBBE3",
           "invert_powerline": true,
           "properties": {
             "always_enabled": true
           },
           "style": "powerline",
-          "template": "<background,transparent>\ue0b2</> {{ .FormattedMs }} ",
-          "type": "executiontime"
+          "template": "<background,transparent>\ue0b2</> {{ if gt .Code 0 }}{{ reason .Code }}{{ else }}\uf42e{{ end }} ",
+          "type": "status"
         }
       ],
       "type": "rprompt"
