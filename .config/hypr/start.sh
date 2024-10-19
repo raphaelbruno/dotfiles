@@ -5,12 +5,11 @@ swww img ~/Pictures/Wallpapers/default.jpg
 
 hyprlock
 swayidle -w timeout 300 ~/.config/hypr/scripts/screenlock &
-hyprctl setcursor 24 &
-
-dunst &
-systemctl --user start plasma-polkit-agent &
 
 waybar &
+
+dunst &
+hyprctl setcursor 24 &
 
 sleep 1
 nm-applet --indicator &
