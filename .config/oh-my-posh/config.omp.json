@@ -192,6 +192,7 @@
           "background": "#1C313F",
           "background_templates": ["{{ if gt .Code 0 }}#cc2222{{ end }}"],
           "foreground": "#4CBBE3",
+          "foreground_templates": ["{{ if gt .Code 0 }}#ffffff{{ end }}"],
           "invert_powerline": true,
           "properties": {
             "always_enabled": true
