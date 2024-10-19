@@ -26,7 +26,7 @@
           "foreground": "#FFFFFF",
           "leading_diamond": "<transparent,#333333>\ue0b0</>",
           "properties": {
-            "folder_icon": "-",
+            "folder_icon": "~",
             "folder_separator_icon": "<transparent> \ue0b1 </>",
             "home_icon": "\ueb06",
             "style": "agnoster_short"
