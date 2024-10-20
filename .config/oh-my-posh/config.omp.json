@@ -5,8 +5,8 @@
       "alignment": "left",
       "segments": [
         {
-          "background": "#1C313F",
-          "foreground": "#4CBBE3",
+          "background": "#1C314F",
+          "foreground": "#669efa",
           "style": "diamond",
           "template": " {{ .Icon }} ",
           "trailing_diamond": "\ue0b0",
@@ -37,14 +37,14 @@
           "type": "path"
         },
         {
-          "background": "#4CBBE3",
+          "background": "#669efa",
           "background_templates": [
-            "{{ if or (.Working.Changed) (.Staging.Changed) }}#4CBBE3{{ end }}",
-            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#4CBBE3{{ end }}",
-            "{{ if gt .Ahead 0 }}#4CBBE3{{ end }}",
-            "{{ if gt .Behind 0 }}#4CBBE3{{ end }}"
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}#669efa{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#669efa{{ end }}",
+            "{{ if gt .Ahead 0 }}#669efa{{ end }}",
+            "{{ if gt .Behind 0 }}#669efa{{ end }}"
           ],
-          "foreground": "#1C313F",
+          "foreground": "#1C314F",
           "powerline_symbol": "\ue0b0",
           "properties": {
             "fetch_stash_count": true,
@@ -189,9 +189,9 @@
           "type": "executiontime"
         },
         {
-          "background": "#1C313F",
+          "background": "#1C314F",
           "background_templates": ["{{ if gt .Code 0 }}#cc2222{{ end }}"],
-          "foreground": "#4CBBE3",
+          "foreground": "#669efa",
           "foreground_templates": ["{{ if gt .Code 0 }}#ffffff{{ end }}"],
           "invert_powerline": true,
           "properties": {

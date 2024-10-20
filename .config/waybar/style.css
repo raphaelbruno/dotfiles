@@ -54,7 +54,7 @@ window#waybar {
 .modules-center:hover,
 .modules-right:hover {
   border: 2px solid;
-  border-color: #5fd1fa;
+  border-color: #669efa;
 }
 
 
@@ -65,7 +65,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-  color: #5fd1fa;
+  color: #669efa;
 }
 
 #workspaces button.empty {
@@ -104,7 +104,7 @@ window#waybar {
 }
 
 #clock {
-  color: #5fd1fa;
+  color: #669efa;
 }
 
 #battery.charging {

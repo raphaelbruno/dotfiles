@@ -18,6 +18,9 @@
 }
 
 configuration {
+  hover-select: true;
+  me-select-entry: "MousePrimary";
+  me-accept-entry: "!MousePrimary";
   modes: [ combi];
   combi-modes: [ window, drun, run];
 }
