@@ -72,8 +72,7 @@
     "format": "{}",
     "return-type": "json",
     "exec": "~/.config/waybar/scripts/weather.sh",
-    "interval": 600,
-    "on-click": "chromium https://wttr.in"
+    "interval": 600
   },
   "custom/clipboard": {
     "format": " ",
@@ -153,7 +152,8 @@
   "disk": {
     "interval": 30,
     "format": " {percentage_used}%",
-    "path": "/"
+    "path": "/",
+    "on-click": "baobab"
   },
   "custom/colorpicker": {
     "format": "{}",
@@ -177,10 +177,12 @@
       "▆",
       "▇",
       "█"
-    ]
+    ],
+    "on-click": "gnome-system-monitor"
   },
   "memory": {
-    "format": " {percentage}%"
+    "format": " {percentage}%",
+    "on-click": "gnome-system-monitor"
   },
   "hyprland/window": {
     "format": "{class}",
@@ -191,7 +193,7 @@
     "format-critical": " {temperatureC}°C",
     "interval": 1,
     "critical-threshold": 80,
-    "on-click": "alacritty btop"
+    "on-click": "gnome-system-monitor"
   },
   "pulseaudio": {
     "format": "{volume}% {icon}",
