@@ -183,11 +183,8 @@
     "format": " {percentage}%"
   },
   "hyprland/window": {
-    "format": "[ {class} ]",
-    "rewrite": {
-      "(.*) - Mozilla Firefox": "🌎 $1",
-      "(.*) - zsh": "> [$1]"
-    }
+    "format": "{class}",
+    "icon": true
   },
   "temperature": {
     "format": " {temperatureC}°C",
