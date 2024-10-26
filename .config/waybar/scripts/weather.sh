@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cachedir=~/.cache/waybar
+cachedir=/tmp/waybar
 cachefile=weather
 
 if [ ! -d $cachedir ]; then
