@@ -5,7 +5,6 @@
     "custom/logo",
     "clock",
     "custom/weather",
-    "disk",
     "memory",
     "cpu",
     "temperature",
@@ -17,13 +16,10 @@
   ],
   "modules-right": [
     "tray",
-    "custom/clipboard",
-    "backlight",
     "idle_inhibitor",
     "custom/colorpicker",
-    "bluetooth",
+    "backlight",
     "pulseaudio",
-    "network",
     "custom/keyboard",
     "battery",
     "custom/power"
@@ -33,18 +29,6 @@
     "format": "",
     "tooltip": false,
     "on-click": "rofi -show drun -show-icons"
-  },
-  "custom/power": {
-    "format": "⏻ ",
-    "tooltip": false,
-    "on-click": "nwg-bar"
-  },
-  "custom/keyboard": {
-    "exec": "hyprctl devices -j | jq -r '.keyboards[] | select(.main == true) | .active_keymap' | cut -c1-2 |   tr 'a-z' 'A-Z'",
-    "interval": 1,
-    "format": "{} ⌨  ",
-    "tooltip": true,
-    "tooltip-format": "Keyboard layout"
   },
   "hyprland/workspaces": {
     "format": "{icon}",
@@ -62,11 +46,19 @@
   "idle_inhibitor": {
     "tooltip-format-activated": "Lock screen inactive",
     "tooltip-format-deactivated": "Lock screen active",
-    "format": "<span font='14'>{icon}</span>",
+    "format": " <span font='14'>{icon}</span>",
     "format-icons": {
       "activated": "󰈈",
       "deactivated": "󰈉"
     }
+  },
+  "custom/colorpicker": {
+    "format": " {} ",
+    "return-type": "json",
+    "interval": "once",
+    "exec": "~/.config/waybar/scripts/colorpicker.sh -j",
+    "on-click": "sleep 1 && ~/.config/waybar/scripts/colorpicker.sh",
+    "signal": 1
   },
   "custom/weather": {
     "format": "{}",
@@ -80,7 +72,7 @@
     "interval": 86400
   },
   "clock": {
-    "format": "{:%D %H:%M}",
+    "format": "📅 {:%H:%M}",
     "interval": 1,
     "tooltip-format": "\n<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "calendar-weeks-pos": "right",
@@ -90,7 +82,7 @@
     "format-calendar-weekdays": "<span color='#aeaeae'><b>{}</b></span>"
   },
   "bluetooth": {
-    "format-on": " ",
+    "format-on": "",
     "format-off": "",
     "format-disabled": "󰂲",
     "format-connected": "󰂴",
@@ -122,32 +114,8 @@
     "format-plugged": "{capacity}% 󰂄 ",
     "format-alt": "{time} {icon}",
     "format-icons": [
-      "󰁻",
-      "󰁼",
-      "󰁾",
-      "󰂀",
-      "󰂂",
-      "󰁹"
+      "󰁻", "󰁼", "󰁾", "󰂀", "󰂂", "󰁹"
     ]
-  },
-  "backlight": {
-    "device": "intel_backlight",
-    "format": "<span font='12'>{icon}</span>",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "on-scroll-down": "light -A 10",
-    "on-scroll-up": "light -U 10",
-    "smooth-scrolling-threshold": 1
   },
   "disk": {
     "interval": 30,
@@ -155,28 +123,13 @@
     "path": "/",
     "on-click": "baobab"
   },
-  "custom/colorpicker": {
-    "format": "{}",
-    "return-type": "json",
-    "interval": "once",
-    "exec": "~/.config/waybar/scripts/colorpicker.sh -j",
-    "on-click": "sleep 1 && ~/.config/waybar/scripts/colorpicker.sh",
-    "signal": 1
-  },
   "cpu": {
     "interval": 1,
     "format": " {usage}%",
     "min-length": 6,
     "max-length": 6,
     "format-icons": [
-      "▁",
-      "▂",
-      "▃",
-      "▄",
-      "▅",
-      "▆",
-      "▇",
-      "█"
+      "▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"
     ],
     "on-click": "gnome-system-monitor"
   },
@@ -185,7 +138,7 @@
     "on-click": "gnome-system-monitor"
   },
   "hyprland/window": {
-    "format": "{class}",
+    "format": "",
     "icon": true
   },
   "temperature": {
@@ -195,8 +148,19 @@
     "critical-threshold": 80,
     "on-click": "gnome-system-monitor"
   },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "<span font='14'>{icon}</span> {percent}%",
+    "format-icons": [
+      "", "", "", "", "", "", "", "", "", "", ""
+    ],
+    "on-scroll-down": "light -A 10",
+    "on-scroll-up": "light -U 10",
+    "smooth-scrolling-threshold": 1,
+    "tooltip-format": "Backlight: {percent}%"
+  },
   "pulseaudio": {
-    "format": "{volume}% {icon}",
+    "format": "{icon} {volume}%",
     "format-bluetooth": "󰂰",
     "format-muted": "<span font='12'></span>",
     "format-icons": {
@@ -208,13 +172,25 @@
       "portable": "",
       "car": "",
       "default": [
-        "🔊"
+        "", "🔈", "🔈", "🔈", "🔈", "🔊", "🔊"
       ]
     },
     "justify": "center",
     "on-click": "amixer sset Master toggle",
     "on-click-right": "pavucontrol",
-    "tooltip-format": "{icon}  {volume}%"
+    "tooltip-format": "Volume: {volume}%"
+  },
+  "custom/keyboard": {
+    "exec": "hyprctl devices -j | jq -r '.keyboards[] | select(.main == true) | .active_keymap' | cut -c1-2 |   tr 'a-z' 'A-Z'",
+    "interval": 1,
+    "format": "{} ⌨",
+    "tooltip": true,
+    "tooltip-format": "Keyboard layout: {}"
+  },
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": false,
+    "on-click": "nwg-bar"
   },
   "jack": {
     "format": "{} 󱎔",

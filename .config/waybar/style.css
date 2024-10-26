@@ -1,8 +1,6 @@
 * {
   border: none;
   font-size: 14px;
-  font-family: 'FiraCode Nerd Font';
-  min-height: 25px;
 }
 
 window#waybar {
@@ -12,13 +10,42 @@ window#waybar {
 
 #custom-logo {
   padding: 0 10px;
+  color: #669efa;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 0 15px 0 10px;
+  margin-right: 5px;
+}
+
+#custom-logo:hover {
+  color: #000000;
+  background-color: #669efa;
+  border-bottom: 3px solid;
+  border-color: #3666b3;
 }
 
 #custom-power {
-  padding: 0 10px;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 0 15px 0 10px;
+  margin-left: 5px;
+}
+
+#custom-power:hover {
+  background-color: #ff0000;
+  border-bottom: 3px solid;
+  border-color: #990000;
+}
+
+#custom-keyboard {
+  color: #669efa;
+  margin: 0 5px;
 }
 
 .modules-left {
+  font-family: 'FiraCode Nerd Font';
+  font-weight: 500;
   padding-right: 10px;
   border-radius: 15;
   margin-left: 6px;
@@ -29,7 +56,12 @@ window#waybar {
   color: #aaaaaa;
 }
 
+.modules-window {
+  background-color: #ff0000;
+}
+
 .modules-center {
+  font-family: 'monospace';
   padding: 0;
   margin-top: 6px;
   border-radius: 15px;
@@ -40,6 +72,8 @@ window#waybar {
 }
 
 .modules-right {
+  font-family: 'FiraCode Nerd Font';
+  font-weight: 500;
   padding-left: 10px;
   border-radius: 15px;
   margin-right: 6px;
@@ -76,6 +110,7 @@ window#waybar {
 #custom-clipboard,
 #custom-colorpicker,
 #custom-powerDraw,
+#custom-keyboard,
 #bluetooth,
 #pulseaudio,
 #network,
