@@ -44,7 +44,7 @@ window#waybar {
 }
 
 .modules-left {
-  font-family: 'FiraCode Nerd Font';
+  font-family: 'Hack Nerd Font';
   font-weight: 500;
   padding-right: 10px;
   border-radius: 15px;
@@ -72,7 +72,7 @@ window#waybar {
 }
 
 .modules-right {
-  font-family: 'FiraCode Nerd Font';
+  font-family: 'Hack Nerd Font';
   font-weight: 500;
   padding-left: 10px;
   border-radius: 15px;
