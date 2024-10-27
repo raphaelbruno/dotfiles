@@ -7,7 +7,7 @@
 }
 
 * {
-  font: "Roboto 12";
+  font: "FiraCode Nerd Font 12";
 
   background-color: transparent;
   text-color: @fg0;
@@ -21,8 +21,6 @@ configuration {
   hover-select: true;
   me-select-entry: "MousePrimary";
   me-accept-entry: "!MousePrimary";
-  modes: [ combi];
-  combi-modes: [ window, drun, run];
 }
 
 element {
@@ -64,6 +62,8 @@ listview {
   border: none;
   spacing: 0;
   lines: 5;
+  fixed-height: false;
+  dynamic:true;
 }
 
 scrollbar {
