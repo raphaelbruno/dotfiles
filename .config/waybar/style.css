@@ -44,7 +44,7 @@ window#waybar {
 }
 
 .modules-left {
-  font-family: 'Hack Nerd Font';
+  font-family: "FiraCode Nerd Font";
   font-weight: 500;
   padding-right: 10px;
   border-radius: 15px;
@@ -61,7 +61,7 @@ window#waybar {
 }
 
 .modules-center {
-  font-family: 'monospace';
+  font-family: "monospace";
   padding: 0;
   margin-top: 6px;
   border-radius: 15px;
@@ -72,7 +72,7 @@ window#waybar {
 }
 
 .modules-right {
-  font-family: 'Hack Nerd Font';
+  font-family: "FiraCode Nerd Font";
   font-weight: 500;
   padding-left: 10px;
   border-radius: 15px;
@@ -90,7 +90,6 @@ window#waybar {
   border: 2px solid;
   border-color: #669efa;
 }
-
 
 #workspaces button {
   color: rgb(170, 170, 170);
