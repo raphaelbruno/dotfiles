@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -119,5 +119,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+TTY_COLOR_SCHEME=~/.cache/wal/sequences
+if [ ! -f "$TTY_COLOR_SCHEME" ]; then
+	wal -i $(hyprctl hyprpaper listloaded | head -n 1) > /dev/null 2>&1
+fi
+(cat $TTY_COLOR_SCHEME &)
 
 eval "$(oh-my-posh init zsh --config ${HOME}/.config/oh-my-posh/config.omp.json)"
