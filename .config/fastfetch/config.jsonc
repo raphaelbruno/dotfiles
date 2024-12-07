@@ -5,16 +5,16 @@
     "type": "kitty",
     "height": 18,
     "padding": {
-      "top": 0,
+      "top": 1,
       "left": 3
     }
   },
   "display": {
-      "separator": "  "
+    "separator": "  "
   },
   "modules": [
     "break",
-    
+
     {
       "type": "os",
       "key": " OS",
