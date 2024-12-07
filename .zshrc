@@ -122,7 +122,7 @@ source $ZSH/oh-my-zsh.sh
 
 TTY_COLOR_SCHEME=~/.cache/wal/sequences
 if [ ! -f "$TTY_COLOR_SCHEME" ]; then
-	wal -i $(hyprctl hyprpaper listloaded | head -n 1) > /dev/null 2>&1
+	wal -i ~/.config/hypr/wallpaper > /dev/null 2>&1
 fi
 (cat $TTY_COLOR_SCHEME &)
 

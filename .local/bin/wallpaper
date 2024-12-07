@@ -1,13 +1,1 @@
-#!/bin/bash
-
-exec > /dev/null 2>&1
-
-loaded_paths=$(hyprctl hyprpaper listloaded)
-echo "$loaded_paths" | while read -r path; do
-    hyprctl hyprpaper unload "$path"
-done
-
-hyprctl hyprpaper preload $1
-hyprctl hyprpaper wallpaper ",$1"
-cp $1 ~/.config/hypr/wallpaper
-wal -i $1
+../../.config/hypr/scripts/wallpaper

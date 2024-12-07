@@ -1,0 +1,19 @@
+#!/bin/bash
+
+DIR="$HOME/Pictures/Wallpapers"
+IMAGE=$1
+if [ -z "$1" ] && [ -d "$DIR" ]; then
+    IMAGE=$(find "$DIR" -type f \( -iname "*.png" -o -iname "*.jpeg" -o -iname "*.jpg" \) | shuf -n 1)
+fi
+
+exec > /dev/null 2>&1
+
+loaded_paths=$(hyprctl hyprpaper listloaded)
+echo "$loaded_paths" | while read -r path; do
+    hyprctl hyprpaper unload "$path"
+done
+
+hyprctl hyprpaper preload "$IMAGE"
+hyprctl hyprpaper wallpaper ",$IMAGE"
+cp "$IMAGE" ~/.config/hypr/wallpaper
+wal -q -b "#1e1e1e" -i "$IMAGE"
