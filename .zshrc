@@ -29,7 +29,7 @@ alias cat="bat --style=auto"
 # User configuration
 TTY_COLOR_SCHEME=~/.cache/wal/sequences
 if [ ! -f "$TTY_COLOR_SCHEME" ]; then
-	wal -i ~/.config/hypr/wallpaper > /dev/null 2>&1
+	wallpaper ~/.config/hypr/wallpaper
 fi
 
 if [ -f "$TTY_COLOR_SCHEME" ]; then

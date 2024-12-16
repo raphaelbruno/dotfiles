@@ -16,4 +16,4 @@ done
 hyprctl hyprpaper preload "$IMAGE"
 hyprctl hyprpaper wallpaper ",$IMAGE"
 cp "$IMAGE" ~/.config/hypr/wallpaper
-wal -q -b "#1e1e1e" -i "$IMAGE"
+wal -q -b "#181818" -i "$IMAGE"
