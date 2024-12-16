@@ -6,14 +6,14 @@ This is for my personal use and it's working in progress, so files can be delete
 
 ## Arch Linux + Hyprland + This Dotfiles
 
-See: https://github.com/raphaelbruno/aha
+See: https://github.com/odevsa/aha
 
 ## Automatic Install
 
 Just run this code and see the magic
 
 ```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/raphaelbruno/dotfiles/main/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/odevsa/dotfiles/main/install.sh)"
 ```
 
 ## Manual Install
@@ -21,7 +21,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/raphaelbruno/dotfiles/main
 - Clone the repo
 
   ```
-  git clone https://github.com/raphaelbruno/dotfiles.git /tmp/dotfiles
+  git clone https://github.com/odevsa/dotfiles.git /tmp/dotfiles
   ```
 
 - Copy files
