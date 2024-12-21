@@ -1,5 +1,5 @@
 # Plugin Manager
-source ~/.zsh/antigen/antigen.zsh
+source ~/.antigen/antigen.zsh
 
 antigen use oh-my-zsh
 
